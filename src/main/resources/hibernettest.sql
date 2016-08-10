@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS Department (
   location varchar(255) DEFAULT NULL COMMENT 'location OF Employee',
   PRIMARY KEY (deptId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+--rollback drop table Department;
 
 
 --changeset rajesh:2
@@ -18,6 +19,7 @@ CREATE TABLE IF NOT EXISTS employee (
   lName varchar(255) DEFAULT NULL COMMENT 'lName OF Employee',
   PRIMARY KEY (empId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+--rollback drop table employee;
 
 --changeset rajesh:3
 --comment: creating employee_Department table
@@ -28,6 +30,7 @@ CREATE TABLE IF NOT EXISTS employee_Department (
   KEY FKF2E35A3F6DFE875 (Employee_empId),
   KEY FKF2E35A3453CBCED (listOfDepts_deptId)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--rollback drop table employee_Department;
 
 --changeset rajesh:4
 --comment: alter table
